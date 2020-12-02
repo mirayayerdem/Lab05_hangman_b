@@ -5,11 +5,21 @@ import cs102.Hangman;
 
 import javax.swing.*;
 import java.awt.*;
+/**
+ * GallowsHangmanView
+ *
+ * @author Miray Ayerdem
+ * @version  2020/12/2
+ */
 
 public class GallowsHangmanView extends JPanel implements IHangmanView
 {
+    //instances
+
     private Hangman hangman;
     private final int WIDTH = 400, HEIGHT = 400;
+
+    //constructor
     public GallowsHangmanView(Hangman hangman)
     {
         this.hangman = hangman;
@@ -30,7 +40,7 @@ public class GallowsHangmanView extends JPanel implements IHangmanView
         g.setColor(Color.BLACK);
         g.fillRect(20,250,200,40); //base
 
-        if(hangman != null) {
+        if(hangman != null) { //add the parts of the man according to the incorrect tries
             if (hangman.getNumOfIncorrectTries() >= 1)
                 g.drawOval(143, 90, 40, 40); //the head
             if (hangman.getNumOfIncorrectTries() >= 2)
@@ -53,5 +63,5 @@ public class GallowsHangmanView extends JPanel implements IHangmanView
     public void updateView(Hangman hangmanModel)
     {
         repaint();
-    }
+    } //calls the paintComponent method
 }
