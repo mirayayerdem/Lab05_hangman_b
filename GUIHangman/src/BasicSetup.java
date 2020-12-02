@@ -2,8 +2,12 @@ package GUIHangman.src;
 
 import cs102.IHangmanSetup;
 
-// BasicSetup
-// David
+/**
+ * BasicSetup
+ *
+ * @author Miray Ayerdem
+ * @version  2020/12/1
+ */
 
 public class BasicSetup implements IHangmanSetup
 {

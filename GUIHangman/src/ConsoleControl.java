@@ -3,8 +3,12 @@ package GUIHangman.src;
 import cs102.Hangman;
 import java.util.Scanner;
 
-// ConsoleControl
-// David, 7/4/2013
+/**
+ * ConsoleControl
+ *
+ * @author Miray Ayerdem
+ * @version  2020/12/1
+ */
 
 public class ConsoleControl
 {
