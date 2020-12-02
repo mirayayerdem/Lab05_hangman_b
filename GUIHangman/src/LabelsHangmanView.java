@@ -6,13 +6,23 @@ import cs102.Hangman;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * LabelsHangmanView
+ *
+ * @author Miray Ayerdem
+ * @version  2020/12/2
+ */
+
 public class LabelsHangmanView extends JPanel implements IHangmanView
 {
     Hangman hangman;
     JLabel incorrectTries, known, usedLetters, lost;
+    private final int WIDTH = 400, HEIGHT = 400;
+
+    //constructor
     public LabelsHangmanView()
     {
-        setPreferredSize(new Dimension(400,400));
+        setPreferredSize(new Dimension(WIDTH, HEIGHT));
         setBackground(Color.PINK);
         incorrectTries = new JLabel("Incorrect Tries: ");
         incorrectTries.setBounds(20,20,400,40);
@@ -27,14 +37,14 @@ public class LabelsHangmanView extends JPanel implements IHangmanView
         lost.setBounds(20,200,400,40);
         lost.setFont(new Font("Verdana",Font.BOLD,15));
         setLayout(null);
-        add(incorrectTries);
+        add(incorrectTries); //adding to the panel
         add(known);
         add(usedLetters);
         add(lost);
 
     }
     @Override
-    public void updateView(Hangman hangmanModel)
+    public void updateView(Hangman hangmanModel) //when the game is updating, texts of labels are set
     {
         this.hangman = hangmanModel;
         incorrectTries.setText("Incorrect tries: " + hangman.getNumOfIncorrectTries());
@@ -42,7 +52,7 @@ public class LabelsHangmanView extends JPanel implements IHangmanView
         usedLetters.setText("Used letters: " + hangman.getUsedLetters());
         if(hangman.isGameOver())
         {
-            if(hangman.hasLost())
+            if(hangman.hasLost()) //status of the player
                 lost.setText("Status: You LOST buddy");
 
             else
