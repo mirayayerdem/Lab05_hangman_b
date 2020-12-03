@@ -4,8 +4,8 @@ import cs102.Hangman;
 /**
  * ConsoleHangman.src.IHangmanView - view interface for MVC demo using Hangman
  *
- * @author David
- * @version 1.00 2012/4/4
+ * @author Miray Ayerdem
+ * @version 2020/12/02
  */
 public interface IHangmanView
 {

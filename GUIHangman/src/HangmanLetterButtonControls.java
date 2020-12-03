@@ -12,6 +12,7 @@ import cs102.Hangman;
 public class HangmanLetterButtonControls extends LetterButtonControls implements IHangmanView {
     private String letters;
     //constructors
+
     public HangmanLetterButtonControls(String letters)
     {
         super(letters);
@@ -22,6 +23,9 @@ public class HangmanLetterButtonControls extends LetterButtonControls implements
     }
 
     @Override
+    /**
+     * according the status of the game buttons are disabled or enabled
+     */
     public void updateView(Hangman hangmanModel)
     {
         setDisabled( hangmanModel.getUsedLetters());

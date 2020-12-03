@@ -32,6 +32,9 @@ public class TextFieldControlPanel extends JPanel {
     class MyActionListener implements ActionListener {  //listener class
 
         @Override
+        /**
+         * the text written by user is checked by tryThis method and setting text empty
+         */
         public void actionPerformed(ActionEvent e)
         {
             String letter;

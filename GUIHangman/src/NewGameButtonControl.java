@@ -29,9 +29,12 @@ public class NewGameButtonControl extends JButton implements IHangmanView
     }
 
     @Override
+    /**
+     * all buttons are enabled
+     */
     public void updateView(Hangman hangmanModel)
     {
-        if(hangman.isGameOver()) //all buttons are enabled
+        if(hangman.isGameOver())
             this.setEnabled(true);
     }
 

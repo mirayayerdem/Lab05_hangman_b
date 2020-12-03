@@ -10,7 +10,7 @@ import cs102.*;
  * @version  2020/12/1
  */
 
-public class ConsoleHangman
+public class ConsoleHangman_b
 {
 	public static void main( String[] args)
 	{
@@ -29,7 +29,7 @@ public class ConsoleHangman
 		view = new ConsoleHangmanView();
 		setup = new BasicSetup();
 		hangmanModel = new HangmanModel(setup);
-		hangmanModel.addView(view);
+		hangmanModel.addView(view); //adding a view
 
 		do
 		{

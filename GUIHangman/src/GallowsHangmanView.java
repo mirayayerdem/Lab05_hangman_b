@@ -28,9 +28,14 @@ public class GallowsHangmanView extends JPanel implements IHangmanView
     }
 
     @Override
+    /**
+     * draw the scene and the man'S parts according to number of attempts
+     */
     public void paintComponent(Graphics g)
     {
         super.paintComponent(g);
+
+
         g.setColor(Color.BLACK);
         g.fillRect(70,30,100,20); //top rectangle
         g.setColor(Color.BLACK);
@@ -60,6 +65,9 @@ public class GallowsHangmanView extends JPanel implements IHangmanView
 
     }
     @Override
+    /**
+     * repaint the scene an the man's parts
+     */
     public void updateView(Hangman hangmanModel)
     {
         repaint();

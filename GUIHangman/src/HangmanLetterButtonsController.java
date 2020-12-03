@@ -19,8 +19,12 @@ public class HangmanLetterButtonsController implements ActionListener
     {
         this.hangman = hangman;
     }
+
     @Override
-    public void actionPerformed(ActionEvent e) //letter of tapped button is sent to tryThis method
+    /**
+     * letter of tapped button is sent to tryThis method and set the button disabled
+     */
+    public void actionPerformed(ActionEvent e)
     {
         char c;
         JButton button = (JButton) e.getSource();

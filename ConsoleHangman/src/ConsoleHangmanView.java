@@ -3,8 +3,12 @@ package ConsoleHangman.src;
 import ConsoleHangman.src.IHangmanView;
 import cs102.Hangman;
 import javax.swing.JPanel;
-// ConsoleHangmanView
-// David, 6/4/2013
+/**
+ * ConsoleHangmanView
+ *
+ * @author Miray Ayerdem
+ * @version  2020/12/1
+ */
 
 public class ConsoleHangmanView extends JPanel implements IHangmanView
 {
